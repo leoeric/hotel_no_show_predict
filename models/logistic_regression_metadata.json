@@ -1,0 +1,36 @@
+{
+    "model_name": "logistic_regression",
+    "params": {},
+    "metrics": {
+        "accuracy": 0.7168333333333333,
+        "precision": 0.6601769911504425,
+        "recall": 0.49910793933987513,
+        "f1": 0.5684531369062739,
+        "roc_auc": 0.7293205953970809
+    },
+    "feature_names": [
+        "booking_id",
+        "branch",
+        "booking_month",
+        "arrival_month",
+        "arrival_day",
+        "checkout_month",
+        "checkout_day",
+        "country",
+        "first_time",
+        "room",
+        "price",
+        "platform",
+        "num_adults",
+        "num_children",
+        "booking_month_num",
+        "arrival_month_num",
+        "checkout_month_num",
+        "stay_duration",
+        "lead_time_months",
+        "currency",
+        "price_value",
+        "is_first_time",
+        "total_occupants"
+    ]
+}
