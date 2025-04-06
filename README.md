@@ -120,7 +120,22 @@ The machine learning pipeline follows these logical steps:
    - Stores evaluation metrics
    - Saves visualizations
 
-![Pipeline Flow Diagram](https://mermaid.ink/img/pako:eNqNksFqwzAMhl_F-NRCXwDvsPZQaClkl-6g2UqjENsltme69L13kkIHg7GdJP3fp19yjryxBnni0LSuiE7pDW4CHnD04O2AbnUdmFD2xq3vdccpLF2PDXq_-1vEFGazeeY0g9mFvsGuiY2RZOYPKCl7qyNK4q3gJdSGihsUSJKFDRXN3oSQm2wkYtKu6mCvPVLIf2gLAo2Vr0gOPHNxAZPcWSMQQ4FkZoXYKnHJRhlvsBL5rEcXOhqw_RNdbNSQzZ-uR_4-kEu78bBTGwV3JhfoKxTz3OraPWy1kbvYXsvIvPE0Yd_jTZfAXXk9DG6o4JnfS9f7lzQuZeKF1xUuKDu-8Ct8bfnKX7nQdOKKX3jDKyWb-Be2OaxZ)
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│   Data Loading  │────▶│  Data Cleaning  │────▶│    Feature      │
+│   (SQLite DB)   │     │  Preprocessing  │     │   Engineering   │
+│                 │     │                 │     │                 │
+└─────────────────┘     └─────────────────┘     └────────┬────────┘
+                                                         │
+                                                         ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│    Results      │◀────│     Model       │◀────│     Model       │
+│    Storage      │     │   Evaluation    │     │    Training     │
+│                 │     │                 │     │                 │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+```
 
 ## EDA Summary and Feature Engineering
 
